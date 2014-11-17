@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dianpu</title>
+	<script src="http://g.tbcdn.cn/tmapp/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	
+
+
+<script>
+	// if (location.href.indexOf("dianpu") > -1 && location.href.indexOf("iscookie") == -1) {location.href = "http://game.play.jaeapp.com/set-cookie/";}
+function manual_open() {
+	$.ajax({
+		url: 'http://game.play.jaeapp.com/sync_cookie/',
+		type: 'post',
+		data: {},
+		dataType: 'json',
+		async: false,
+		crossDomain: true,
+		xhrFields: {
+			withCredentials : true
+		},
+		beforeSend: function(xhr){
+		 	xhr.setRequestHeader("set-cookie","session=lcyang");
+		},
+		success: function(data){
+			manual_open();
+			$("body").append("<iframe width=1000 height:800; src=http://game.play.jaeapp.com/index/></iframe>");
+		},
+		error: function(xhr, status, error){
+
+		}
+	});
+</script>
+	
+<body>
+<!-- <iframe src="http://game.play.jaeapp.com/index/" width="1000"></iframe> -->
+</body>
+</html>

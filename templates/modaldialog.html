@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modalDialog</title>
+</head>
+<body>
+<button type="" onclick="manual_open()" width="100" height="200">manual_open</button>
+<button type="" onclick="manual_dialog()" width="100" height="200">manual_dialog</button>
+<script>
+	window.open("http://tmall.com");
+	function manual_open() {
+		window.open('http://tmall.com','newwindow','height=500,width=500,top=100,left=500,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no') 
+	}
+	window.showModalDialog('http://tmall.com', {name: ""}, "dialogWidth=870px;dialogHeight=580px");
+	
+	var smd ;
+	function manual_dialog() {
+		smd = window.showModalDialog('http://game.play.jaeapp.com/dialog/', {}, "dialogWidth=870px;dialogHeight=580px");
+		if (smd == 1) {
+			alert(smd)
+		}
+	}
+
+</script>
+</body>
+</html>

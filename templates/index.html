@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game index</title>
+</head>
+<script src="http://g.tbcdn.cn/tmapp/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+<script>
+window.localStorage.setItem("name","lcyang");
+	console.log("localStorage:", localStorage.getItem("name"));
+	document.cookie = "js-set-cookie=js-set-cookie";
+</script>
+<body>
+ 
+<p id="cookie"></p>
+<script>
+	$("#cookie").text(document.domain+"--->"+document.cookie);
+</script>
+</body>
+</html>
